@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Board</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #302e2b;
+    font-family: Arial, sans-serif;
+}
+
+.chess-container {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: min(90vw, 560px);
+    aspect-ratio: 1;
+    border: 5px solid #222;
+    box-shadow: 0 5px 20px #111;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    font-size: clamp(25px, 7vw, 55px);
+    cursor: pointer;
+    user-select: none;
+}
+
+.light {
+    background: #f0d9b5;
+}
+
+.dark {
+    background: #b58863;
+}
+
+.white-piece {
+    color: #fff;
+    text-shadow: 2px 2px 2px #222;
+}
+
+.black-piece {
+    color: #222;
+    text-shadow: 1px 1px 1px #777;
+}
+
+.square:hover {
+    background: #cdd26a;
+}
+
+.info {
+    color: #ddd;
+    margin-top: 15px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="chess-container">
+
+    <h1>Chess Board</h1>
+
+    <div class="board">
+
+        <!-- Black Pieces -->
+        <div class="square light black-piece">♜</div>
+        <div class="square dark black-piece">♞</div>
+        <div class="square light black-piece">♝</div>
+        <div class="square dark black-piece">♛</div>
+        <div class="square light black-piece">♚</div>
+        <div class="square dark black-piece">♝</div>
+        <div class="square light black-piece">♞</div>
+        <div class="square dark black-piece">♜</div>
+
+        <!-- Black Pawns -->
+        <div class="square dark black-piece">♟</div>
+        <div class="square light black-piece">♟</div>
+        <div class="square dark black-piece">♟</div>
+        <div class="square light black-piece">♟</div>
+        <div class="square dark black-piece">♟</div>
+        <div class="square light black-piece">♟</div>
+        <div class="square dark black-piece">♟</div>
+        <div class="square light black-piece">♟</div>
+
+        <!-- Empty Row -->
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+
+        <!-- White Pawns -->
+        <div class="square light white-piece">♙</div>
+        <div class="square dark white-piece">♙</div>
+        <div class="square light white-piece">♙</div>
+        <div class="square dark white-piece">♙</div>
+        <div class="square light white-piece">♙</div>
+        <div class="square dark white-piece">♙</div>
+        <div class="square light white-piece">♙</div>
+        <div class="square dark white-piece">♙</div>
+
+        <!-- White Pieces -->
+        <div class="square dark white-piece">♖</div>
+        <div class="square light white-piece">♘</div>
+        <div class="square dark white-piece">♗</div>
+        <div class="square light white-piece">♕</div>
+        <div class="square dark white-piece">♔</div>
+        <div class="square light white-piece">♗</div>
+        <div class="square dark white-piece">♘</div>
+        <div class="square light white-piece">♖</div>
+
+    </div>
+
+    <p class="info">Chess Board • HTML & CSS</p>
+
+</div>
+
+</body>
+</html>
