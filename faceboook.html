@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #e9ebee;
+        }
+
+        .header {
+            background: #3b5998;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12%;
+            color: white;
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .login input {
+            width: 170px;
+            padding: 8px;
+            border: 1px solid #1d2a5b;
+        }
+
+        .login button {
+            background: #4267b2;
+            color: white;
+            border: 1px solid #29487d;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 45px auto;
+            gap: 50px;
+        }
+
+        .left {
+            width: 52%;
+            padding-top: 30px;
+        }
+
+        .left h2 {
+            font-size: 28px;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+
+        .left p {
+            margin: 25px 0;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .left b {
+            color: #333;
+        }
+
+        .right {
+            width: 42%;
+        }
+
+        .right h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .right .sub {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .form input {
+            padding: 13px;
+            border: 1px solid #ccd0d5;
+            border-radius: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .form .half {
+            width: calc(50% - 5px);
+        }
+
+        .birthday {
+            margin-top: 20px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        select {
+            padding: 8px;
+            margin-top: 8px;
+            border: 1px solid #ccd0d5;
+        }
+
+        .gender {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .gender label {
+            margin-right: 20px;
+        }
+
+        .terms {
+            font-size: 11px;
+            color: #777;
+            margin: 18px 0;
+            line-height: 1.5;
+        }
+
+        .signup {
+            background: #42b72a;
+            color: white;
+            border: 1px solid #398a24;
+            border-radius: 6px;
+            padding: 12px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .page {
+            margin-top: 25px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .login {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main {
+                flex-direction: column;
+                padding: 20px;
+                margin: 20px auto;
+                gap: 25px;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">facebook</div>
+
+        <div class="login">
+            <input type="text" placeholder="Email or phone">
+            <input type="password" placeholder="Password">
+            <button type="button">Log In</button>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="left">
+            <h2>
+                Connect with friends and the world around you on Facebook.
+            </h2>
+
+            <p>
+                <b>See photos and updates</b>
+                from friends in News Feed
+            </p>
+
+            <p>
+                <b>Share what's new</b>
+                in your life on your timeline
+            </p>
+
+            <p>
+                <b>Find more</b>
+                of what you're looking for with graph search
+            </p>
+        </section>
+
+        <section class="right">
+            <h1>Sign Up</h1>
+            <p class="sub">It's free and always will be.</p>
+
+            <form class="form" onsubmit="return false;">
+
+                <input class="half" type="text"
+                    placeholder="First name">
+
+                <input class="half" type="text"
+                    placeholder="Last name">
+
+                <input type="text"
+                    placeholder="Email or mobile number">
+
+                <input type="text"
+                    placeholder="Re-enter email or mobile number">
+
+                <input type="password"
+                    placeholder="New password">
+
+                <div class="birthday">
+                    Birthday
+                </div>
+
+                <div>
+                    <select>
+                        <option>Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+
+                    <select>
+                        <option>Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                    </select>
+
+                    <select>
+                        <option>Year</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                    </select>
+                </div>
+
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender">
+                        Male
+                    </label>
+                </div>
+
+                <p class="terms">
+                    By clicking Sign Up, you agree to our Terms,
+                    Data Policy and Cookie Policy.
+                </p>
+
+                <button class="signup" type="submit">
+                    Sign Up
+                </button>
+
+            </form>
+
+            <p class="page">
+                <b>Create a Page</b> for a celebrity, band or business.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
