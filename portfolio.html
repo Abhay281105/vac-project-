@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhay Gupta | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 8%;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 15px 0;
+    }
+
+    .hero-text h1 span {
+      color: #38bdf8;
+    }
+
+    .hero-text h2 {
+      color: #cbd5e1;
+      font-size: 25px;
+    }
+
+    .hero-text p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 13px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+    }
+
+    .hero-image {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 5px solid #38bdf8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #38bdf8;
+    }
+
+    .about {
+      background: #111827;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.8;
+      color: #cbd5e1;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 20px 35px;
+      border-radius: 8px;
+      color: #7dd3fc;
+      font-weight: bold;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+    }
+
+    .project h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .project p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    .contact {
+      background: #111827;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 15px 0;
+    }
+
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text h2 {
+        font-size: 20px;
+      }
+
+      .hero-image {
+        width: 200px;
+        height: 200px;
+        font-size: 70px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">Abhay.</div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <p>Hello, I'm</p>
+      <h1>Abhay <span>Gupta</span></h1>
+      <h2>B.Tech CSE (AI) Student</h2>
+
+      <p>
+        I am a passionate developer interested in Artificial Intelligence,
+        Web Development and creating useful projects.
+      </p>
+
+      <a href="#projects" class="btn">View My Projects</a>
+    </div>
+
+    <div class="hero-image">👨‍💻</div>
+
+  </section>
+
+  <section class="about" id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+      I am a Computer Science student specializing in Artificial Intelligence.
+      I enjoy learning programming, solving DSA problems and building
+      websites using HTML and CSS. My goal is to improve my technical
+      skills and develop real-world projects.
+    </p>
+
+  </section>
+
+  <section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+      <div class="skill">C++</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">DSA</div>
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>Blinkit Clone</h3>
+        <p>
+          A grocery delivery landing page designed using HTML and CSS.
+        </p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project">
+        <h3>Spotify Clone</h3>
+        <p>
+          A music streaming website interface with playlists and a music player.
+        </p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="project">
+        <h3>Fake News Detection</h3>
+        <p>
+          A machine learning project that classifies news articles as
+          real or fake.
+        </p>
+        <a href="#">View Project →</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>Interested in working together? Feel free to contact me.</p>
+
+    <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+
+    <a href="mailto:yourmail@gmail.com" class="btn">Send Message</a>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Abhay Gupta. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
