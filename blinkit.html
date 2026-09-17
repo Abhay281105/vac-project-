@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blinkit Clone</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    .navbar {
+      height: 80px;
+      background: white;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      padding: 0 35px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #f8c900;
+    }
+
+    .location {
+      font-size: 13px;
+      color: #333;
+      min-width: 150px;
+    }
+
+    .location b {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .search {
+      flex: 1;
+      max-width: 500px;
+      height: 45px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      color: #888;
+    }
+
+    .search input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .login {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .cart {
+      background: #f2f2f2;
+      padding: 14px 22px;
+      border-radius: 8px;
+      color: #999;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      min-height: 230px;
+      border-radius: 15px;
+      padding: 40px;
+      background: linear-gradient(100deg, #a8d5a2, #e9f5b8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .hero p {
+      color: white;
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 450px;
+    }
+
+    .shop-btn {
+      margin-top: 22px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      background: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      font-size: 110px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      min-height: 150px;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card h2 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .order-btn {
+      padding: 9px 14px;
+      border: none;
+      border-radius: 5px;
+      background: #555;
+      color: white;
+      cursor: pointer;
+    }
+
+    .card-image {
+      font-size: 60px;
+    }
+
+    .blue {
+      background: #b5e6f5;
+    }
+
+    .yellow {
+      background: #f4e2a0;
+    }
+
+    .light-blue {
+      background: #c7e3f7;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        height: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .search {
+        order: 5;
+        flex-basis: 100%;
+        max-width: none;
+      }
+
+      .hero {
+        padding: 25px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .hero-image {
+        font-size: 60px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">blinkit</div>
+
+    <div class="location">
+      <b>Delivery in 8 minutes</b>
+      RV3W+2WJ, Mahal Rd, Karl...
+    </div>
+
+    <div class="search">
+      🔍
+      <input type="text" placeholder="Search in Blinkit">
+    </div>
+
+    <div class="login">Login</div>
+
+    <div class="cart">🛒 My Cart</div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div>
+        <h1>Stock up on daily essentials</h1>
+        <p>Get farm-fresh goodness & a range of exotic fruits, vegetables, eggs & more</p>
+        <button class="shop-btn">Shop Now</button>
+      </div>
+
+      <div class="hero-image">🥛🍎🍌🥚</div>
+    </section>
+
+    <section class="cards">
+
+      <div class="card blue">
+        <div>
+          <h2>Pharmacy at<br>your doorstep!</h2>
+          <p>Cough syrups, pain relief sprays & more</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+        <div class="card-image">💊</div>
+      </div>
+
+      <div class="card yellow">
+        <div>
+          <h2>Pet care supplies<br>at your door</h2>
+          <p>Food, treats, toys & more</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+        <div class="card-image">🐶</div>
+      </div>
+
+      <div class="card light-blue">
+        <div>
+          <h2>No time for<br>a diaper run?</h2>
+          <p>Get baby care essentials</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+        <div class="card-image">👶</div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
